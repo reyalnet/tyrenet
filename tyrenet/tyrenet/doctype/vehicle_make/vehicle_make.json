@@ -1,40 +1,28 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:tyre_size",
- "creation": "2025-05-21 00:06:41.866808",
+ "autoname": "field:vehicle_make",
+ "creation": "2025-05-25 23:13:59.779462",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "tyre_size",
-  "tyre_category"
+  "vehicle_make"
  ],
  "fields": [
   {
-   "fieldname": "tyre_size",
+   "fieldname": "vehicle_make",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Tyre Size",
-   "reqd": 1,
+   "label": "Vehicle Make",
    "unique": 1
-  },
-  {
-   "fieldname": "tyre_category",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Tyre Category",
-   "options": "\nPCR (Passenger)\nLT (Light Truck)\nSUV (4x4 / Sport Utility)\nTBR (Truck & Bus Radial)\nOTR (Off-the-Road)\nAGR (Agricultural)\nIND (Industrial)\nMotorcycle / Scooter\nCustom / Vintage",
-   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-25 23:49:04.923051",
+ "modified": "2025-05-25 23:15:10.902800",
  "modified_by": "Administrator",
  "module": "Tyrenet",
- "name": "Tyre Size",
+ "name": "Vehicle Make",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [

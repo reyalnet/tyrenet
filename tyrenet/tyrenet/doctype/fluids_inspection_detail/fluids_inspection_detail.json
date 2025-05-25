@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-26 00:20:18.231279",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "oil_type",
+  "last_change_km",
+  "level",
+  "condition"
+ ],
+ "fields": [
+  {
+   "fieldname": "oil_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "\nEngine Oil\nRadiator Coolant\nTransmission Oil\nDiff Oil (Drive Shaft)\nBrake Fluid"
+  },
+  {
+   "fieldname": "last_change_km",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Last Change (Km)"
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Level",
+   "options": "\nLow\nNormal\nHigh"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Condition",
+   "options": "\nOptimal\nAcceptible\nNeeds Attention"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-26 00:28:25.070306",
+ "modified_by": "Administrator",
+ "module": "Tyrenet",
+ "name": "Fluids Inspection Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

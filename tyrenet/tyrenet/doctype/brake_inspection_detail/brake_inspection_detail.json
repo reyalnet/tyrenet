@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-26 00:10:59.384877",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "brake_location",
+  "brake_thickness_mm",
+  "disk__drum_status",
+  "brake_remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "brake_location",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Brake Location",
+   "options": "Front Right\nFront Left\nRear Right\nRear Left",
+   "reqd": 1
+  },
+  {
+   "fieldname": "brake_thickness_mm",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Brake Thickness (mm)",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "disk__drum_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Disk / Drum Status",
+   "options": "Good\nFair\nIrregular Wear\nWorn Out"
+  },
+  {
+   "fieldname": "brake_remarks",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Remarks",
+   "options": "Normal\nPending Attention\nUrgent Attention"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-26 00:16:52.326564",
+ "modified_by": "Administrator",
+ "module": "Tyrenet",
+ "name": "Brake Inspection Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
