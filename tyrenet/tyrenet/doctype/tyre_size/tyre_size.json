@@ -6,7 +6,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "tyre_size"
+  "tyre_size",
+  "tyre_category"
  ],
  "fields": [
   {
@@ -16,12 +17,21 @@
    "label": "Tyre Size",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "tyre_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tyre Category",
+   "options": "\nPCR (Passenger)\nLT (Light Truck)\nTBR (Truck & Bus Radial)\nOTR (Off-the-Road)\nAGR (Agricultural)\nIND (Industrial)\nMotorcycle / Scooter\nCustom / Vintage",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-21 14:22:40.364342",
+ "modified": "2025-05-25 22:47:27.159445",
  "modified_by": "Administrator",
  "module": "Tyrenet",
  "name": "Tyre Size",
