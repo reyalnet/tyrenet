@@ -11,6 +11,7 @@
   "inspection_date",
   "column_break_yuhi",
   "inspector",
+  "company",
   "vehicle_particulars_section",
   "registration_number",
   "year_of_manufacture",
@@ -23,11 +24,11 @@
   "model",
   "cc_rating",
   "tyre_section",
-  "table_mcpv",
+  "tyre_inspection_detail",
   "brakes_section",
-  "table_rsly",
+  "brake_inspection_detail",
   "oil_and_fluids_section",
-  "table_ludy",
+  "fluid_inspection_detail",
   "suspension_section",
   "table_esza"
  ],
@@ -54,7 +55,8 @@
   {
    "fieldname": "registration_number",
    "fieldtype": "Data",
-   "label": "Registration Number"
+   "label": "Registration Number",
+   "reqd": 1
   },
   {
    "fieldname": "vehicle_make",
@@ -118,29 +120,14 @@
    "label": "Tyres"
   },
   {
-   "fieldname": "table_mcpv",
-   "fieldtype": "Table",
-   "options": "Tyre Inspection Detail"
-  },
-  {
    "fieldname": "brakes_section",
    "fieldtype": "Section Break",
    "label": "Brakes"
   },
   {
-   "fieldname": "table_rsly",
-   "fieldtype": "Table",
-   "options": "Brake Inspection Detail"
-  },
-  {
    "fieldname": "oil_and_fluids_section",
    "fieldtype": "Section Break",
    "label": "Engine Oil & Other Fluids"
-  },
-  {
-   "fieldname": "table_ludy",
-   "fieldtype": "Table",
-   "options": "Fluids Inspection Detail"
   },
   {
    "fieldname": "suspension_section",
@@ -161,13 +148,34 @@
    "fieldtype": "Link",
    "label": "Inspector",
    "options": "Employee"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "tyre_inspection_detail",
+   "fieldtype": "Table",
+   "options": "Tyre Inspection Detail"
+  },
+  {
+   "fieldname": "brake_inspection_detail",
+   "fieldtype": "Table",
+   "options": "Brake Inspection Detail"
+  },
+  {
+   "fieldname": "fluid_inspection_detail",
+   "fieldtype": "Table",
+   "options": "Fluids Inspection Detail"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-26 00:49:07.537889",
+ "modified": "2025-05-26 12:05:55.230015",
  "modified_by": "Administrator",
  "module": "Tyrenet",
  "name": "Car Inspection",

@@ -1,9 +1,8 @@
 # Copyright (c) 2025, Cubenet and contributors
 # For license information, please see license.txt
 
-# import frappe
+import frappe
 from frappe.model.document import Document
 
-
 class CarInspection(Document):
-	pass
+    pass
