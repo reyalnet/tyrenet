@@ -6,8 +6,13 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_break_kjia",
   "tyre_size",
-  "tyre_category"
+  "tyre_category",
+  "column_break_yehk",
+  "reorder_level",
+  "section_break_lglt",
+  "available_brands_html"
  ],
  "fields": [
   {
@@ -26,12 +31,43 @@
    "label": "Tyre Category",
    "options": "\nPCR (Passenger)\nLT (Light Truck)\nSUV (4x4 / Sport Utility)\nTBR (Truck & Bus Radial)\nOTR (Off-the-Road)\nAGR (Agricultural)\nIND (Industrial)\nMotorcycle / Scooter\nCustom / Vintage",
    "reqd": 1
+  },
+  {
+   "fieldname": "reorder_level",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Reorder Level",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "column_break_yehk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_lglt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "available_brands_html",
+   "fieldtype": "HTML",
+   "label": "Available Brands",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_kjia",
+   "fieldtype": "Section Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2025-05-25 23:49:04.923051",
+ "links": [
+  {
+   "link_doctype": "Item",
+   "link_fieldname": "custom_tyre_size"
+  }
+ ],
+ "modified": "2025-06-02 23:29:48.644018",
  "modified_by": "Administrator",
  "module": "Tyrenet",
  "name": "Tyre Size",
