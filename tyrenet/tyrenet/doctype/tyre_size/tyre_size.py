@@ -5,6 +5,8 @@
 from frappe.model.document import Document
 from urllib.parse import quote
 from frappe.utils import escape_html
+import frappe
+from frappe import _
 
 class TyreSize(Document):
 	pass
@@ -76,3 +78,21 @@ def get_brands_html(tyre_size):
 
     html += '</tbody></table></div>'
     return html
+
+# Item Size Linking Function
+@frappe.whitelist()
+def link_matching_items(tyre_size):
+    matched = 0
+    items = frappe.get_all(
+        "Item",
+        filters={"item_group": "Tyres"},
+        fields=["name", "item_code", "custom_tyre_size"]
+    )
+
+    for item in items:
+        if tyre_size in (item.item_code or ""):
+            if item.custom_tyre_size != tyre_size:
+                frappe.db.set_value("Item", item.name, "custom_tyre_size", tyre_size)
+                matched += 1
+
+    return f"{matched} Tyre(s) linked to Tyre Size: {tyre_size}"
