@@ -2,16 +2,16 @@
 # For license information, please see license.txt
 
 # import frappe
-from frappe.model.document import Document
 from urllib.parse import quote
-from frappe.utils import escape_html
+
 import frappe
 from frappe import _
+from frappe.model.document import Document
+from frappe.utils import escape_html, get_url_to_form
+
 
 class TyreSize(Document):
 	pass
-import frappe
-from frappe import _
 
 @frappe.whitelist()
 def get_brands_html(tyre_size):
@@ -19,7 +19,7 @@ def get_brands_html(tyre_size):
         return "<p>Invalid tyre size.</p>"
 
     data = frappe.db.sql("""
-        SELECT 
+        SELECT
             i.name AS item_name,
             i.brand,
             b.warehouse,
@@ -64,7 +64,7 @@ def get_brands_html(tyre_size):
     html += '</tr></thead><tbody>'
 
     for item_name, item_data in item_map.items():
-        item_url = f"/app/item/{quote(item_name)}"
+        item_url = get_url_to_form("Item", item_name)
         html += f'''
         <tr>
             <td style="width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
